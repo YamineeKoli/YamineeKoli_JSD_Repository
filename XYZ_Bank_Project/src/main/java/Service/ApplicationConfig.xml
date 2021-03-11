@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd 
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd" 
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+	
+<context:annotation-config/>
+	<context:component-scan base-package="Dao"/>
+		<bean id="databaseConnect" class="Dao.DatabaseConnect"></bean>
+	<context:component-scan base-package="Service"/>
+		<bean id="serviceClass" class="Service.ServiceClass"></bean>
+	<context:component-scan base-package="bean"/>
+		<bean id="customer_Details" class="bean.Customer_Details"></bean>
+	<context:component-scan base-package="bean"/>
+		<bean id="customer_Transaction_Log" class="bean.Customer_Transaction_Log"></bean>
+</beans>
